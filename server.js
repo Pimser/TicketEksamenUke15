@@ -30,7 +30,7 @@ const dbURI = process.env.MONGO_URI;
 mongoose.connect(dbURI)
     .then((result) => {
         console.log("Tilkoblet til MongoDB");
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0', () => {
             console.log(`Serveren kjører på port ${PORT}!`);
         });
 

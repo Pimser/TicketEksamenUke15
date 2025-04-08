@@ -60,7 +60,7 @@ module.exports.adminDashboard_get = async (req, res) => {
         const user = await User.findById(req.user.id);
         const username = user.username;
         if (user.role == "admin") {
-            console.log("Admin is in dashboard");
+            // console.log("Admin is in dashboard");
             res.render("adminDashboard", {tickets, user, username});
         } else {
             console.log("User in not admin!");
@@ -121,3 +121,5 @@ module.exports.openTicket = async (req, res) => {
         res.status(500).send("Server error: Unable to close the ticket");
     }
 }
+
+
