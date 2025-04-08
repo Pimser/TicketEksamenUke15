@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+.Welcome {
+    display: flex;
+    justify-content: center;
+
+}
+
+body{
+    margin: 20px 40px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    background: #121212;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #BB86FC;
+}
+
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand" , "sans-serif";
+    color: #E0E0E0;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav li a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+    display: block;
+    padding: 10px 16px;
+    letter-spacing: 2px;
+}
+
+.btn {
+    border-radius: 36px;
+    background: rgb(151, 80, 33);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background: rgb(177, 95, 40);
+}
+
+form h2{
+    font-size: 2.4em;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.form-main {
+    width: 360px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3); /* Mørkere skygge for mer kontrast */
+    border-radius: 10px;
+    background: #1E1E1E; /* Mørk bakgrunn for skjemaet */
+    color: #E0E0E0; /* Lys tekstfarge */
+}
+
+input {
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid #333; /* Mørkere kant for input-feltene */
+    font-size: 1em;
+    width: 100%;
+    background: #333; /* Mørk bakgrunn for input-feltene */
+    color: #E0E0E0; /* Lys tekstfarge i input */
+}
+
+input:focus {
+    outline: none;
+    border-color: #BB86FC; /* Lilla kant ved fokus */
+    background-color: #444; /* Litt lysere bakgrunn ved fokus */
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+    color: #E0E0E0; /* Lys tekst for label */
+}
+
+button {
+    margin-top: 30px;
+    border-radius: 36px;
+    background: #BB86FC; /* Lilla farge for knappen */
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8em;
+    display: block;
+    padding: 10px 16px;
+    letter-spacing: 2px;
+    color: #121212; /* Mørk tekst på knappen for bedre kontrast */
+}
+
+button:hover {
+    background: #985EFF; /* Endre bakgrunnsfarge på hover */
+}
+
+.ticket_image {
+    position: absolute; /* Positioning the image */
+    top: 50%; /* Position at the vertical center of the page */
+    left: 50%; /* Position at the horizontal center of the page */
+    transform: translate(-50%, -50%); /* Offset by half of its width and height to truly center it */
+    opacity: 0.3; /* Make the image 50% transparent */
+    z-index: -1; /* Send the image behind the content */
+}
+
+/* Container for the form and the images */
+.form-container {
+    position: relative;
+    width: 80%; /* Adjust based on how wide you want the form to be */
+    margin: 0 auto;
+    padding: 50px 20px; /* Add padding to prevent images from being too close */
+    background: #1e1e1e; /* Dark background for the form container */
+    border-radius: 10px;
+}
+
+.ticket-left {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 150px; /* Set size of the ticket image */
+    opacity: 0.5; /* 50% transparency */
+    background-image: url('path/to/ticket-image.png');
+    background-size: contain; /* Ensure the whole image is visible */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ticket-right {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 150px; /* Set size of the ticket image */
+    opacity: 0.5; /* 50% transparency */
+    background-image: url('path/to/ticket-image.png');
+    background-size: contain; /* Ensure the whole image is visible */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ticket-container{
+    display: flex;
+    width: 100%;
+}
+  
+.Ticketbutton-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background: #86e39d; */
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+  
+.Ticketbutton-container div {
+    width: 100%;
+}
+
+
+.ticket-title {
+    color: #ef7e22;
+    font-weight: bold;
+     font-size: 30px;
+}
+
+.ticket-title-dash {
+    font-weight: bold;
+    font-size: 30px;
+    color: #f3b87e;
+}
+
+.ticket-btn {
+    display: flex;
+    border-radius: 10px;
+    background-image: url('./ticket3.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    min-width: 150px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    transition: border-radius 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 3px solid rgba(228, 92, 39, 0.249); /* White transparent stroke */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-btn::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.6) 0%, rgba(255, 87, 34, 0.4) 50%, rgba(255, 140, 0, 0) 100%);
+    border-radius: inherit;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.ticket-btn:hover::before {
+    opacity: 1;
+}
+
+
+.tag-text {
+    color: orange;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-y: auto;
+    background-color: #444;
+    color: #fff; /* Change text color */
+    font-family: 'Arial', sans-serif; /* Change font */
+    border: 1px solid #666; /* Custom border */
+    outline: none; /* Removes white outline */
+}
+
+/* Remove background from the scrollbar */
+textarea::-webkit-scrollbar {
+    width: 8px; /* Adjust scrollbar width */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: transparent; /* Removes background */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar color */
+    border-radius: 4px;
+}
+
+/* On hover, make scrollbar slightly lighter */
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+
+textarea:focus {
+    border: 1px solid #c09448; 
+    box-shadow: 0 0 8px rgba(192, 148, 72, 0.7); /* Soft glow effect */
+}
+
+/* CSS for ticket status colors */
+.closed-status {
+    color: red; /* Color for closed tickets */
+    font-weight: bold;
+}
+
+.open-status {
+    color: green; /* Color for open tickets */
+    font-weight: bold;
+}

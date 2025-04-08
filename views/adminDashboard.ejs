@@ -1,0 +1,42 @@
+<%- include("partials/header") -%>
+
+<h1>Admin Dashboard:</h1>
+
+<%- include("partials/ticketBack") -%>
+
+<div class="ticket-container">
+
+    <div class="Ticketbutton-container">
+        <% if (tickets && tickets.length > 0) { %>
+            <% tickets.forEach(tick => { %>
+                <a href="/tickets/<%= tick._id %>" class="ticket-btn">
+                <div>
+                        <p class="ticket-title">
+                            <%= tick.title %> 
+                        </p>
+                         <p style="font-weight: bold;">
+                           tag: <%= tick.tags %> 
+                        </p>
+                        <br>
+                        <span class="<%= tick.status === 'closed' ? 'closed-status' : 'open-status' %>">
+                            <%= tick.status %>
+                        </span>
+                        <% if (tick.status == "open") { %>
+                            <form action="/close" method="POST" style="display:inline;">
+                                <input type="hidden" name="id" value="<%= tick._id %>">
+                                <button type="submit" class="close-btn">Close</button>
+                            </form>
+                        <% } else {%>
+                            <form action="/open" method="POST" style="display:inline;">
+                                <input type="hidden" name="id" value="<%= tick._id %>">
+                                <button type="submit" class="open-btn">Open</button>
+                            </form>
+                        <% } %>
+                    </div>
+                </a>
+            <% }); %>
+        <% } else { %>
+            <p>No tickets found</p>
+        <% } %>
+    </div>
+</div>

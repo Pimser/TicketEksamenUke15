@@ -1,0 +1,26 @@
+<%- include("partials/header") -%>
+
+<title><%= tick.title %></title>
+
+<body>
+
+    <p class="ticket-title">
+        <%= tick.title %> 
+    </p>
+    <br>
+    <br>
+    <div class="ticket-description">
+        <% tick.description.split("\n").forEach(line => { %>
+            <p style="font-weight: bold;"><%= line %></p>
+        <% }) %>
+    </div>
+    <br>
+    <br>
+    <p style="font-weight: bold;">Tags: <span class="tag-text"> <%= tick.tags %></span></p>
+    <br>
+    <br>
+    <br>
+
+    <a href="/dashboard" style="font-size: 15px; color: grey;">(<) Back</a>
+
+</body>

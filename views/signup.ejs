@@ -1,0 +1,25 @@
+<%- include("partials/header") -%>
+
+<%- include("partials/ticketLeft") -%>
+<%- include("partials/ticketRight") -%>
+
+<form method="POST" class="form-main">
+    <h2>Sign up</h2>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username">
+    <div class="username error"></div>
+    <% if (errors && errors.username) { %>
+        <p class="error"><%= errors.username %></p>
+    <% } %>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email">
+    <% if (errors && errors.email) { %>
+        <p class="error"><%= errors.email %></p>
+    <% } %>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password">
+    <div class="password error"></div>
+    <button type="submit">Sign up</button>
+</form>
+
+

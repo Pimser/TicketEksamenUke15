@@ -1,0 +1,31 @@
+<%- include("partials/header") -%>
+
+<h1>Ticket Dashboard:</h1>
+
+<%- include("partials/ticketBack") -%>
+
+<div class="ticket-container">
+
+    <div class="Ticketbutton-container">
+        <% if (tickets && tickets.length > 0) { %>
+            <% tickets.forEach(tick => { %>
+                <a href="/tickets/<%= tick._id %>" class="ticket-btn">
+                <div>
+                        <p class="ticket-title">
+                            <%= tick.title %> 
+                        </p>
+                         <p style="font-weight: bold;">
+                           tag: <%= tick.tags %> 
+                        </p>
+                        <p>
+                            <%= tick.status %>
+                        </p>
+
+                    </div>
+                </a>
+            <% }); %>
+        <% } else { %>
+            <p>No tickets found</p>
+        <% } %>
+    </div>
+</div>

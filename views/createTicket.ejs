@@ -1,0 +1,14 @@
+<%- include("partials/header") -%>
+<%- include("partials/ticketLeft") -%>
+<%- include("partials/ticketRight") -%>
+
+<form method="POST" class="form-main">
+    <h2>Create Ticket</h2>
+    <label for="title">Title:</label>
+    <input type="text" name="title" id="title">
+    <label for="description">Description:</label>
+    <textarea name="description" id="description"></textarea>
+    <label for="tag">Tags:</label>
+    <input type="text" name="tag" id="tag">
+    <button type="submit">Create</button>
+</form>
