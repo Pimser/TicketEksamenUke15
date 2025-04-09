@@ -49,8 +49,9 @@ module.exports.ticket_id_get = async (req, res) => {
     try {
         const tick = await Ticket.findById(req.params.id).populate('user', 'username');
         const user = req.user;
+        const username = user.username;
         const comments = await Comment.find({ ticket: req.params.id }).populate('user', 'username');
-        res.render("ticket-details", { tick, comments }); // <--{user} her hvis du får error
+        res.render("ticket-details", { tick, username, comments }); // <--{user} her hvis du får error
       } catch (err) {
         res.status(404).send("No tickets found!");
       }

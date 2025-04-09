@@ -18,7 +18,9 @@ const isAdmin = (req, res, next) => {
                 next();
             }
         });
-    } 
+    } else {
+        next();
+    }
 }
 
 module.exports = { isAdmin };

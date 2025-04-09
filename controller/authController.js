@@ -80,8 +80,11 @@ module.exports.login_post = async (req, res) => {
 
 
 module.exports.logout_get = (req, res) => {
-    res.cookie("jwt", "", {maxAge: 1});
+    console.log("Logout route hit");
+
+    res.cookie("jwt", "", { httpOnly: true, maxAge: 1 });
+    console.log("Cookie cleared");
+
     res.redirect("/");
-}
-
-
+    console.log("Redirecting to /");
+};
