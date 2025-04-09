@@ -300,3 +300,107 @@ textarea:focus {
     color: green; /* Color for open tickets */
     font-weight: bold;
 }
+
+th {
+    font-weight: bold;
+    font-family: "Quicksand" , "sans-serif";
+    color: #ca7630;
+}
+
+td {
+    font-weight: bold;
+    font-family: "Quicksand", "sans-serif";
+    color: #ffffff;
+}
+
+.all-user-container{
+    display: flex;
+    width: 100%;
+}
+
+
+
+.all-user-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background: #bc761b63; */
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.all-user-btn{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: rgba(230, 114, 32, 0.636);
+    min-height: 200px;
+    min-width: 150px;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 10px;
+    border: 3px solid rgba(229, 119, 75, 0.359);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.all-user-btn:hover{
+    background: rgba(251, 113, 14, 0.714);
+}
+
+.user-name{
+    color: #ffad65;
+    font-size: 24px;
+}
+
+.role-styling{
+    color: rgb(97, 51, 17);
+}
+
+
+
+.index-container {
+    display: flex;
+    justify-content: center; /* Sentraliserer innholdet horisontalt */
+    align-items: center; /* Sentraliserer innholdet vertikalt */
+    height: 25vh; /* Sørger for at containeren fyller hele skjermen */
+    width: 100%;
+    /* background: rgba(255, 0, 0, 0.144); */
+}
+
+.index-container ul {
+    display: flex;
+    justify-content: space-around; /* Sprer elementene ut */
+    align-items: center;
+    width: 50%; /* Juster bredden etter behov */
+    list-style: none;
+    padding: 0;
+}
+
+.index-container li {
+    margin: 0 10px;
+}
+
+.btn-index {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgb(151, 80, 33);
+    color: white;
+    border-radius: 36px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-index:hover{
+    background: rgb(177, 95, 40);
+}

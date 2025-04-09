@@ -1,0 +1,24 @@
+<%- include("partials/header") -%>
+
+
+<body>
+    <h2>All Users</h2>
+
+    <% if (users && users.length > 0) { %>
+        <div class="all-user-container">
+            <div class="all-user-btn-container">
+                <% users.forEach(user => { %>
+                    <a href="/user/<%= user._id %>">
+                        <div class="all-user-btn">
+                            <p class="user-name"><%= user.username %></p>
+                            <br>
+                            <p class="role-styling"><%= user.role %></p>
+                        </div>
+                    </a>
+                <% }) %>
+            </div>
+        </div>
+    <% } else { %>
+        <p>No users found.</p>
+    <% } %>
+</body>

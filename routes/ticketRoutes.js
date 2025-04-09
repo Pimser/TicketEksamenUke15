@@ -9,6 +9,12 @@ router.get("/createTicket", requireAuth, ticketController.createTicket_get);
 router.get("/dashboard", requireAuth, ticketController.dashboard_get);
 router.get("/tickets/:id", requireAuth, ticketController.ticket_id_get);
 router.get("/adminDashboard", requireAuth, ticketController.adminDashboard_get);
+router.get("/tickets/:id", requireAuth, ticketController.ticketDetails);
+
+//user related
+
+router.get("/user/:id", requireAuth, ticketController.userAccount_get);
+
 
 
 
@@ -16,5 +22,6 @@ router.get("/adminDashboard", requireAuth, ticketController.adminDashboard_get);
 router.post("/createTicket", requireAuth, ticketController.createTicket_post);
 router.post("/close", requireAuth, ticketController.closeTicket);
 router.post("/open", requireAuth, ticketController.openTicket);
+router.post("/tickets/:id/comment", requireAuth, ticketController.addComment);
 
 module.exports = router;

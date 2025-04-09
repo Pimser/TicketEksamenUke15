@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<title><%= user.username %> - Account</title>
+
+<body>
+    <h1><p style="color: #ef7e22;">User Account: </p> <%= user.username %></h1>
+    <br>
+    <div>
+        <p>Email: <strong><%= user.email %></strong></p>
+        <br>
+        <p>Role: <strong style="color: lightcoral;"><%= user.role %></strong></p>
+    </div>
+    <br>
+    <br>
+
+    <a href="/dashboard" style="font-size: 15px; color: grey;">(<) Back to Dashboard</a>
+</body>

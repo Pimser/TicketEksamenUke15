@@ -19,6 +19,11 @@ const ticketSchema = new Schema({
         type: String,
         enum: ["open", "closed"],
         default: "open",
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
     }
 })
 
