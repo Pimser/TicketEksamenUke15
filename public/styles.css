@@ -404,3 +404,46 @@ td {
 .btn-index:hover{
     background: rgb(177, 95, 40);
 }
+
+
+.faq-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    /* background: #f9f9f9; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #cd8014;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-question:hover {
+    background: #d5953b;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    /* background: #ffffff; */
+    font-size: 14px;
+}
+
+.toggle-icon {
+    font-weight: bold;
+}

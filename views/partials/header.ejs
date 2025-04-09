@@ -15,14 +15,15 @@
         
             <p style="color: rgb(224, 137, 55); font-weight: bold; text-shadow: 0 0 8px rgba(224, 137, 55, 0.7);">Hello <%= username %>!</p>
             <ul>
+                <li><a href="/faq" class="btn">FAQ</a></li>
                 <li><a href="/about" class="btn">About</a></li>
                 <li><a href="/createTicket" class="btn">Create Ticket</a></li>
                 <li><a href="/dashboard" class="btn">Dashboard</a></li>
-                
                 <li><a href="/logout" class="btn">Log out</a></li>
             </ul>
             <%} else {%>
                 <ul>
+                    <li><a href="/faq" class="btn">FAQ</a></li>
                     <li><a href="/about" class="btn">About</a></li>
                     <li><a href="/login" class="btn">Log in</a></li>
                     <li><a href="/signup" class="btn">Sign up</a></li>

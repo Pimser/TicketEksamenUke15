@@ -88,3 +88,20 @@ module.exports.logout_get = (req, res) => {
     res.redirect("/");
     console.log("Redirecting to /");
 };
+
+module.exports.faq_get = async (req, res) => {
+    res.render("faq");
+    // try {
+    //     const user = await User.create({username, email, password});
+    //     if (!user) {
+    //         console.log("Not logged-in user entered faq");
+    //         res.status(201).render("faq", { user: user._id, errors: {}, username, role: user.role });
+    //     } else {
+    //         console.log("user entered faq");
+    //         res.render("faq", {user: username});
+    //     }
+    // } catch (err) {
+    //     console.log("error getting faq", err);
+    //     res.redirect("/");
+    // }
+}

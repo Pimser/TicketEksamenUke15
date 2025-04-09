@@ -1,0 +1,38 @@
+
+<%- include("partials/header") -%>
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+        <button class="faq-question">What is this website about? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">This website is for posting your problems with tickets, and get support from other users on the site </div>
+    </div>
+    
+    <div class="faq-item">
+        <button class="faq-question">How do i create tickets? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">You will need to log in or create a new user in order to gain access to the create ticket page. 
+            A create ticket button will appear on the header whenever you are logged in.
+        </div>
+    </div>
+    
+    <div class="faq-item">
+        <button class="faq-question">Who can I contact for support? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">For support on your tickets, you simply need to wait for a reply.
+            if you are in need of any other support thats not related to the ticket, contact something@gmail.com!
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.toggle-icon');
+            
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            icon.textContent = icon.textContent === '+' ? '-' : '+';
+        });
+    });
+</script>
+
