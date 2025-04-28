@@ -30,7 +30,7 @@ app.set("view engine", "ejs");
 const PORT = process.env.PORT || 3000;
 const dbURI = process.env.MONGO_URI;
 
-mongoose.connect(dbURI)
+mongoose.connect(dbURI || 'mongodb://localhost:27017/EksamenUke15')
     .then((result) => {
         console.log("Tilkoblet til MongoDB");
         app.listen(PORT, '0.0.0.0', () => {

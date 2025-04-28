@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-container
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: ticketdb
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - ticketeeksamen-nettverk
+
+  app:
+    build: .
+    container_name: app-container
+    restart: always
+    ports:
+      - "${PORT}:3000"   # 👈 Bruk PORT fra .env
+    environment:
+      MONGO_URL: ${MONGO_URI}  # 👈 Bruk MONGO_URL fra .env
+    depends_on:
+      - mongo
+    networks:
+      - ticketeeksamen-nettverk
+
+networks:
+  ticketeeksamen-nettverk:
+    driver: bridge
+
+volumes:
+  mongo-data:

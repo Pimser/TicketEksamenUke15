@@ -1,0 +1,8 @@
+
+
+start app med docker-compose = docker-compose up -d
+
+logg ofr container = docker logs app-container
+
+slette alle containere som ikke kjører = docker system prune -a
+

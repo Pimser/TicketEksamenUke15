@@ -1,0 +1,25 @@
+# Ignorer node_modules, vi kjører npm install i Dockerfile
+node_modules
+
+# Ignorer logs
+logs
+*.log
+
+# Ignorer .env (sensitiv informasjon)
+.env
+
+# Ignorer Git
+.git
+.gitignore
+
+# Ignorer Docker-filer
+docker-compose.yml
+Dockerfile
+
+# Andre ting vi ikke trenger
+npm-debug.log
+dist
+tmp
+*.swp
+.DS_Store
+Thumbs.db
